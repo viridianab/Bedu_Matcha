@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@900&family=Open+Sans&family=Slabo+27px&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: #fffbf7;
+}
+/* Section: Navbar */
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #fffbf7;
+    top: 0;
+    width: 100%;
+    /*
+    height: 45px;
+    */
+    padding: 20px 20px;
+    z-index: 2;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent!important;
+}
+.navbar .nav-link {
+    color: #025157;
+}
+a.navbar-brand {
+    font-size: 24px;
+    color: #46484c;
+}
+.navbar ul {
+    display: flex;
+    gap: 0 25px;
+}
+.navbar ul.buttons {
+    gap: 0 10px;
+}
+.navbar.navbar-expand-lg .navbar-nav.buttons .nav-link {
+    font-size: 14px;
+    color: #67b54b;
+    background-color: #67b54b;
+    padding: 14px 18px;
+    border-radius: 5px;
+}
+.navbar.navbar-expand-lg .navbar-nav.buttons li:nth-child(1) .nav-link {
+    background-color: transparent;
+}
+.navbar.navbar-expand-lg .navbar-nav.buttons li:nth-child(2) .nav-link {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faq {
+    margin-top: 50px;
+    padding-bottom: 120px;
+}
+
+.faq h2 {
+    color: #025157;
+    font-family: "Alegreya", serif;
+}
+
+.faq .card-header {
+    background-color: white;
+    border-left: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.faq h2>button {
+    color: #025157;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.faq .card .card-body a {
+    color: #6abf4b;
+}
+
+
+@media (max-width: 991px) {
+    .navbar {
+        text-align: center;
+    }
+    .navbar ul.buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .buildblog h1 {
+        font-size: 30px;
+    }
+    
+}

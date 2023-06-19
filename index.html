@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica de Semana 03</title>
+    <title>Matcha</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +13,8 @@
         https://bedu-fef.netlify.app/
     -->
     <!-- Navbar -->
-    <header class="header">
+    <header class="header fixed-top">
+        <!--
         <nav class="navbar" role="navigation">
             <a href="index.html" class="navbar-brand">Matcha</a>
             <ul class="nav-list">
@@ -27,8 +29,45 @@
                 <li><a href="">Sign free trial</a></li>
             </ul>
         </nav>
+    -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Matcha</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                    aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Platform</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto buttons">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign free trial</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <!-- Sección: Welcome -->
+    <!-- Section: Welcome -->
     <main class="buildblog">
         <h1>Build your blog. Build your business.</h1>
         <p>Instantly publish articles, drive more traffic, grow your email list, and see your blog’s impact on sales.</p>
@@ -38,15 +77,18 @@
         </form>
         <p>Start publishing today with a <strong>free 7-day trial</strong>.</p>
         <p><strong>No credit card</strong> required.</p>
+        <div class="images">
+            <img class="capterra" src="img/capterra.png" alt="Capterra">
+            <img src="img/intro_group_image.png" alt="Intro">
+        </div>
     </main>
-    <!-- Sección: Promo -->
+    <!-- Section: Promo -->
     <section class="promo">
         <article class="promo-video">
             <video controls poster="https://cdn.videvo.net/videvo_files/video/premium/video0036/thumbnails/computer_code00_small.jpg" src="https://cdn.videvo.net/videvo_files/video/premium/video0036/small_watermarked/computer_code00_preview.mp4">
             </video>
             <div class="icon">
-                <span>See how it works</span>
-                <img src="https://images.vexels.com/media/users/3/206269/isolated/preview/5bf110f14d50531aaca26c251c3441aa-doodle-de-flecha-vertical.png" alt="See how it works" />
+                <img src="img/see_how_it_works.png" alt="See how it works" />
             </div>
         </article>
         <!-- Contenido publicitario -->
@@ -66,12 +108,12 @@
             </form>
         </article>
     </section>
-    <!-- Sección: Entradas -->
+    <!-- Section: Features -->
     <section class="features">
-        <article class="entry">
+        <article class="feature-card">
             <div class="feature-content">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_publish.png" alt="Publish icon">
+                    <img src="img/icons/icon_publish.png" alt="Publish icon">
                 </figure>
                 <h3>Fill your blog with engaging articles.</h3>
                 <p>
@@ -82,62 +124,143 @@
             </div>
             <div class="feature-image">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_publish.png" alt="Publish example">
+                    <img src="img/features/image_publish.png" alt="Publish example">
                 </figure>
             </div>
         </article>
-        <article class="entry">
+        <article class="feature-card">
             <div class="feature-content">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_publish.png" alt="Publish icon">
+                    <img src="img/icons/icon_site_traffic.png" alt="Site traffic icon">
                 </figure>
-                <h3>Fill your blog with engaging articles.</h3>
-                <p>
-                    Publish to your blog in less time than it takes to drink your
-                    morning coffee.
-                </p>
-                <a href="">Publish instantly →</a>
+                <h3>Attract and engage more website visitors.</h3>
+                <p>Enhance your email, social media channels, and paid ads with content from Matcha.</p>
+                <a href="">Get more site traffic →</a>
             </div>
             <div class="feature-image">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_publish.png" alt="Publish example">
+                    <img src="img/features/image_site_traffic.png" alt="Publish example">
                 </figure>
             </div>
         </article>
-        <article class="entry">
+        <article class="feature-card">
             <div class="feature-content">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_publish.png" alt="Publish icon">
+                    <img src="img/icons/icon_capture.png" alt="Capture icon">
                 </figure>
-                <h3>Fill your blog with engaging articles.</h3>
-                <p>
-                    Publish to your blog in less time than it takes to drink your
-                    morning coffee.
-                </p>
-                <a href="">Publish instantly →</a>
+                <h3>Capture more emails with locked content.</h3>
+                <p>Convert 10x more of your traffic into subscribers and nurture them to a sale.</p>
+                <a href="">Grow your email list faster →</a>
             </div>
             <div class="feature-image">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_publish.png" alt="Publish example">
+                    <img src="img/features/image_capture.png" alt="Capture example">
                 </figure>
             </div>
         </article>
-        <article class="entry">
+        <article class="feature-card">
             <div class="feature-content">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/icon_publish.png" alt="Publish icon">
+                    <img src="img/icons/icon_roi.png" alt="ROI icon">
                 </figure>
-                <h3>Fill your blog with engaging articles.</h3>
-                <p>
-                    Publish to your blog in less time than it takes to drink your
-                    morning coffee.
-                </p>
-                <a href="">Publish instantly →</a>
+                <h3>Optimize your blog’s performance.</h3>
+                <p>See what content delivers the most traffic, engagement, email subscribers, and sales.</p>
+                <a href="">See content’s ROI →</a>
             </div>
             <div class="feature-image">
                 <figure>
-                    <img src="https://getmatcha.com/wp-content/themes/getmatcha/img/image_publish.png" alt="Publish example">
+                    <img src="img/features/image_roi.png" alt="ROI example">
                 </figure>
+            </div>
+        </article>
+    </section>
+    <!-- Section: Stories -->
+    <section class="success-stories">
+        <article class="overview">
+            <h2>Growing ecommerce brands rely on Matcha.</h2>
+            <p>Are you tired of wasting time publishing blog articles to only see a trickle of traffic and no impact on sales? Join hundreds of business owners and ecommerce marketers who rely on Matcha for quality content and consistent performance from their blogs.</p>
+            <a href="#">Who Uses Matcha?</a>
+            <figure>
+                <img src="img/brands_group.png" alt="Brands">
+            </figure>
+        </article>
+
+        <article class="stories-carousel">
+            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <img src="img/profile-headshot-square.png" class="card-img-top"
+                                alt="Everly">
+                            <div class="card-body">
+                                <div class="card-circle everly">
+                                    <img src="img/everly_logo_blue_v3_x60@2x.png" alt="Everly">
+                                </div>
+                                <h4>Everly</h4>
+                                <h3>Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce Revenue 20%</h3>
+                                <div class="results">
+                                    <img src="img/icon_cart.png" alt="Cart icon">
+                                    <p>22% of monthly revenue influenced by content</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button>See Case Study</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="img/profile-headshot-square.png" class="card-img-top"
+                                alt="Everly">
+                            <div class="card-body">
+                                <div class="card-circle everly">
+                                    <img src="img/everly_logo_blue_v3_x60@2x.png" alt="Everly">
+                                </div>
+                                <h4>Everly</h4>
+                                <h3>Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce Revenue 20%</h3>
+                                <div class="results">
+                                    <img src="img/icon_cart.png" alt="Cart icon">
+                                    <p>22% of monthly revenue influenced by content</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button>See Case Study</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <img src="img/profile-headshot-square.png" class="card-img-top"
+                                alt="Everly">
+                            <div class="card-body">
+                                <div class="card-circle everly">
+                                    <img src="img/everly_logo_blue_v3_x60@2x.png" alt="Everly">
+                                </div>
+                                <h4>Everly</h4>
+                                <h3>Early-Stage CPG Brand Increases Lead Conversion 20x, Ecommerce Revenue 20%</h3>
+                                <div class="results">
+                                    <img src="img/icon_cart.png" alt="Cart icon">
+                                    <p>22% of monthly revenue influenced by content</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button>See Case Study</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
         </article>
     </section>
@@ -147,9 +270,6 @@
 
 
 
-
-
-
-
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

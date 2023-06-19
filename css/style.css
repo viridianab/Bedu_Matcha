@@ -5,17 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+html, body {
     position: relative;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     background-color: #fffbf7;
 }
 /* Section: Navbar */
 header {
-    position: fixed;
     display: flex;
     justify-content: center;
-    font-family: sans-serif;
     background-color: #fffbf7;
     top: 0;
     width: 100%;
@@ -32,10 +31,10 @@ header {
     padding: 12px 24px;
     height: 100%;
     width: 100%;
+    background-color: transparent!important;
 }
-.navbar a {
+.navbar .nav-link {
     color: #025157;
-    text-decoration: none;
 }
 a.navbar-brand {
     font-size: 24px;
@@ -48,20 +47,17 @@ a.navbar-brand {
 .navbar ul.buttons {
     gap: 0 10px;
 }
-.navbar li {
-    list-style-type: none;
-}
-.buttons a {
+.navbar.navbar-expand-lg .navbar-nav.buttons .nav-link {
     font-size: 14px;
     color: #67b54b;
     background-color: #67b54b;
-    padding: 14px 12px;
+    padding: 14px 18px;
     border-radius: 5px;
 }
-.buttons li:nth-child(1) a {
+.navbar.navbar-expand-lg .navbar-nav.buttons li:nth-child(1) .nav-link {
     background-color: transparent;
 }
-.buttons li:nth-child(2) a {
+.navbar.navbar-expand-lg .navbar-nav.buttons li:nth-child(2) .nav-link {
     color: #fff;
 }
 /* Section: Header */
@@ -90,13 +86,15 @@ a.navbar-brand {
     margin-bottom: 10px;
 }
 .trynow input {
-    padding: 12px 24px;
+    font-size: 18px;
+    padding: 18px 24px;
     border: 1px solid #ccc;
     border-right: 0;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
 }
 .trynow button {
+    font-size: 18px;
     color: #fff;
     background-color: #025157;
     padding: 12px 24px;
@@ -106,11 +104,28 @@ a.navbar-brand {
     cursor: pointer;
 }
 .buildblog form ~ p {
-    font-family: verdana;
+    font-family: 'Open sans';
     font-size: 16px;
     color: #8b8b8bcc;
     line-height: 1.75;
     margin: 0;
+}
+.buildblog .images {
+    margin: 45px auto 0;
+}
+.buildblog .images img {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.buildblog .images img:first-child {
+    max-width: 350px;
+    margin-bottom: 35px;
+}
+.buildblog .images img:last-child {
+    max-width: 950px;
 }
 /* Section: Promo */
 .promo {
@@ -122,11 +137,12 @@ a.navbar-brand {
 }
 .promo-video .icon {
     display: flex;
-    align-items: center;
-    opacity: .5;
+    justify-content: center;
 }
 .promo-video img {
-    width: 50px;
+    max-width: 150px;
+    width: 100%;
+    height: auto;
 }
 .publish h3 {
     font-family: "Alegreya", serif;
@@ -136,7 +152,6 @@ a.navbar-brand {
     margin-bottom: 15px;
 }
 .publish p {
-    font-family: sans-serif;
     font-size: 16px;
     color: #343434;
     line-height: 1.5;
@@ -161,9 +176,258 @@ a.navbar-brand {
     grid-template: repeat(2, 1fr) / repeat(2, 50%);
     gap: 25px;
 }
-.features .entry {
+.features .feature-card {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 0 20px;
+    padding: 30px 0 20px 50px;
     background-color: #fff;
+    border-radius: 5px;
+}
+.feature-image {
+    position: relative;
+    overflow: hidden;
+}
+.feature-image img {
+    position: relative;
+    right: 0;
+    margin-right: 50%;
+    max-height: 250px;
+    height: 100%;
+    width: auto;
+}
+.feature-content img {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin-bottom: 25px;
+}
+.feature-content h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #343434;
+    margin-bottom: 15px;
+}
+.feature-content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #7e7e7e;
+    margin-bottom: 10px;
+}
+.feature-content a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #67b54b;
+    text-decoration: none;
+}
+/* Section: Stories */
+.success-stories {
+    background-color: #a1d683;
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.success-stories .overview img {
+    display: block;
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+}
+.success-stories .overview {
+    flex: 2;
+    padding-right: 100px;
+}
+.success-stories .overview h2 {
+    font-family: "Alegreya", serif;
+    font-size: 51px;
+    line-height: 61px;
+    color: #025157;
+}
+.success-stories .overview p {
+    color: #343434;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.success-stories a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    background: #025157;
+    border-radius: 8px;
+}
+.success-stories .card {
+    max-width: 350px;
+    width: 100%;
+    min-height: 600px;
+    margin: 0 auto;
+}
+.success-stories .card img {
+    max-height: 250px;
+    object-fit: cover;
+}
+.success-stories .card .card-body {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    padding: 40px 20px 20px;
+}
+.success-stories .card .card-body h4 {
+    font-family: "Slabo 27px", serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #025157;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+.success-stories .card .card-body h3 {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.success-stories .card .card-body .results {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.success-stories .card .card-body .results img {
+    width: 26px;
+    height: auto;
+    margin-right: 20px;
+}
+.success-stories .card .card-body .results p {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #828282;
+    margin-right: 20px;
+}
+.success-stories .card .card-footer button {
+    display: block;
+    font-size: 13;
+    font-weight: 600;
+    color: #fff;
+    padding: 12px 20px;
+    width: 100%;
+    background-color: #025157;
+    border: none;
+    border-radius: 5px;
+}
+.success-stories .card .card-footer {
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+}
+.success-stories .card .card-body .card-circle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -37px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 5px;
+}
+.success-stories .card-circle.everly {
+    background-color: #f9da73;
+    border: 5px solid #f9da73;
+}
+.success-stories .card-circle.everly img {
+    object-fit: contain;
+    width: 100%;
+}
+.carousel-indicators {
+    bottom: -50px;
+}
+.carousel-indicators [data-bs-target] {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid #025157;
+    background-color: transparent;
+    opacity: 1;
+}
+.carousel-indicators .active {
+    background-color: #025157;
 }
 /* Section: x */
 /* Section: x */
-/* Section: x */
+
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    .navbar {
+        text-align: center;
+    }
+    .navbar ul.buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .buildblog h1 {
+        font-size: 30px;
+    }
+    .trynow {
+        padding: 0 10px;
+    }
+    .trynow input {
+        font-size: 16px;
+        width: 60%;
+    }
+    .trynow button {
+        font-size: 16px;
+        width: 40%;
+    }
+    .main {
+        margin-top: 130px;
+    }
+    .promo {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    .promo-video video {
+        width: 100%;
+    }
+    .publish h3 {
+        font-size: 25px;
+        line-height: 1.2;
+        margin-top: 25px;
+    }
+    .publish .trynow {
+        padding: 0;
+    }
+    .features {
+        grid-template: repeat(4, 1fr) / 1fr;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .feature-image {
+        display: none;
+    }
+    .features .feature-card {
+        display: block;
+        padding: 40px 30px;
+    }
+    .success-stories {
+        flex-direction: column;
+        padding: 80px 10px;
+    }
+    .success-stories .overview {
+        padding: 0;
+    }
+    .stories-carousel {
+        margin-top: 45px;
+    }
+}
