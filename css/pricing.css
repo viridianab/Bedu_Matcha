@@ -60,14 +60,51 @@ a.navbar-brand {
 .navbar.navbar-expand-lg .navbar-nav.buttons li:nth-child(2) .nav-link {
     color: #fff;
 }
-
-
-
-
-
-
-
-
+.header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 285px;
+    text-align: center;
+}
+.header h1 {
+    font-family: "Alegreya", serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: #025157;
+    margin-bottom: 24px;
+}
+.header p {
+    font-size: 18px;
+    color: #46484c;
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+}
+.platforms {
+    margin: 150px auto 0;
+}
+.platforms h5 {
+    font-size: 16px;
+    color: #025157;
+    margin-bottom: 20px;
+}
+.platforms .btn-secondary {
+    font-size: 18px;
+    color: #46484c;
+    padding: 18px 32px;
+    background-color: #f4f4f4;
+}
+.platforms .btn-group .btn:first-child,
+.platforms .btn-group .btn:nth-child(2),
+.platforms .btn-group .btn:first-child:hover {
+    border-right: 0;
+}
+.platforms .btn-group .btn:nth-child(2),
+.platforms .btn-group .btn:last-child,
+.platforms .btn-group .btn:hover:nth-child(2),
+.platforms .btn-group .btn:hover:last-child {
+    border-left: 0;
+}
 
 
 
@@ -108,8 +145,17 @@ a.navbar-brand {
         flex-direction: row;
         justify-content: center;
     }
-    .buildblog h1 {
+    .header h1 {
         font-size: 30px;
     }
-    
+    .header p {
+        padding: 0 10px;
+    }
+    .platforms {
+        padding: 0 10px;
+    }
+    .platforms .btn-secondary {
+        font-size: 16px;
+        padding: 18px;
+    }
 }
