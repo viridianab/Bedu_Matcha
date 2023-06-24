@@ -1,0 +1,136 @@
+/** aboutUs.scss */
+@use "global" as *;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	position: relative;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	background-color: $white;
+}
+
+/* Navbar */
+.header {
+	display: flex;
+	justify-content: center;
+	background-color: $background;
+	top: 0;
+	width: 100%;
+	padding: 20px 20px;
+	z-index: 2;
+}
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 24px;
+	height: 100%;
+	width: 100%;
+	background-color: transparent !important;
+
+	&-light &-nav .nav-link {
+		color: $dark-green-title;
+	}
+	& ul {
+		display: flex;
+		gap: 0 25px;
+	}
+	& ul.buttons {
+		gap: 0 10px;
+	}
+
+	&-expand-lg &-nav.buttons {
+		.nav-link {
+			font-size: 14px;
+			color: $light-green;
+			background-color: $light-green;
+			padding: 14px 18px;
+			border-radius: 5px;
+		}
+		li:nth-child(1) .nav-link {
+			background-color: transparent;
+		}
+		li:nth-child(2) .nav-link {
+			color: $white;
+		}
+	}
+	a.navbar-brand {
+		font-size: 24px;
+		color: #46484c;
+	}
+}
+/* Aqui van los estilos que copiamos de las otras páginas que funcionan */
+
+.top-features {
+	padding: 30px 0 65px;
+	margin-top: 150px;
+}
+
+.section-title {
+	text-align: center;
+	margin-bottom: 60px;
+
+	h1 {
+		color: #025157;
+		font-family: "Alegreya", serif;
+		font-weight: 700;
+	}
+}
+
+.feature__img {
+	img {
+		width: 100%;
+	}
+}
+
+
+
+.feature__title__anchor {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    font-size: 24px;
+
+    .feature__title {
+        margin-top: 50px;
+        font-weight: 500;
+        font-size: 24px;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 35px;
+        text-decoration: none;
+        text-shadow: #025157 1px 1px 2px;
+        transition: color .3s ease-in-out;
+        transition: font-size 3s;
+
+        &:hover {
+            color: #67b54b;
+            font-size: 30px;
+        }
+    }
+}
+
+
+
+@media (max-width: 991px) {
+	.navbar {
+		text-align: center;
+
+		ul.buttons {
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+	.header {
+		h1 {
+			font-size: 30px;
+		}
+		p {
+			padding: 0 10px;
+		}
+	}
+}
