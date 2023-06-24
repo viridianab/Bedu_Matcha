@@ -1,0 +1,145 @@
+/** blog.scss */
+@use "global" as *;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: $white;
+}
+
+
+/* Navbar */
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: $background;
+    top: 0;
+    width: 100%;
+    padding: 20px 20px;
+    z-index: 2;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent!important;
+
+    &-light &-nav .nav-link {
+        color: $dark-green-title;
+    }
+    & ul {
+        display: flex;
+        gap: 0 25px;
+    }
+    & ul.buttons {
+        gap: 0 10px;
+    }
+
+    &-expand-lg &-nav.buttons {
+        .nav-link {
+            font-size: 14px;
+            color: $light-green;
+            background-color: $light-green;
+            padding: 14px 18px;
+            border-radius: 5px;
+        }
+        li:nth-child(1) .nav-link {
+            background-color: transparent;
+        }
+        li:nth-child(2) .nav-link {
+            color: $white;
+        }
+    }
+    a.navbar-brand {
+        font-size: 24px;
+        color: #46484c;
+    }
+}
+
+
+
+/* Blog */
+.blog {
+	background-color: $white;
+	max-width: unset;
+	padding: 5% 10%;
+
+	.title {
+		@extend %base-title;
+	}
+
+	.process-list {
+		margin-top: 40px;
+		margin-bottom: 36px;
+
+		.process {
+			margin-bottom: 25px;
+
+			& > div {
+				& > h3 {
+					color: $dark-green-title;
+					margin-bottom: 0;
+					font-size: 30px;
+					font-weight: 500;
+				}
+				& > p {
+					color: $dark-green-text;
+					margin: 0;
+				}
+			}
+
+			.process-icon {
+				width: 60px;
+				height: 60px;
+				margin-right: 10px;
+				text-align: center;
+
+				img {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	button {
+		height: auto;
+		border-radius: 8px;
+		padding: 12px;
+		width: 180px;
+		margin-bottom: 15px;
+	}
+}
+
+
+
+
+
+@media (max-width: 991px) {
+    .navbar {
+        text-align: center;
+
+        ul.buttons {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .header {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+            padding: 0 10px;
+        }
+    }
+    
+}

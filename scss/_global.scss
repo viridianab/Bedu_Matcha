@@ -18,14 +18,3 @@ $font-title: "Alegreya", serif;
     font-family: $font-title;
     color: $dark-green-text;
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body {
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    background-color: $white;
-}

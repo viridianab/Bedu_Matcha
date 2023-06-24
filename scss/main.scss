@@ -1,58 +1,6 @@
 /** main.scss */
 @use "global" as *;
 
-/* Navbar */
-.header {
-    display: flex;
-    justify-content: center;
-    background-color: $background;
-    top: 0;
-    width: 100%;
-    padding: 20px 20px;
-    z-index: 2;
-}
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 24px;
-    height: 100%;
-    width: 100%;
-    background-color: transparent!important;
-
-    &-light &-nav .nav-link {
-        color: $dark-green-title;
-    }
-    & ul {
-        display: flex;
-        gap: 0 25px;
-    }
-    & ul.buttons {
-        gap: 0 10px;
-    }
-
-    &-expand-lg &-nav.buttons {
-        .nav-link {
-            font-size: 14px;
-            color: $light-green;
-            background-color: $light-green;
-            padding: 14px 18px;
-            border-radius: 5px;
-        }
-        li:nth-child(1) .nav-link {
-            background-color: transparent;
-        }
-        li:nth-child(2) .nav-link {
-            color: $white;
-        }
-    }
-    a.navbar-brand {
-        font-size: 24px;
-        color: #46484c;
-    }
-}
-
-
 
 /* Blog */
 .blog {
@@ -69,14 +17,16 @@
 		margin-bottom: 36px;
 
 		.process {
+            display: flex;
+            gap: 0 20px;
 			margin-bottom: 25px;
 
 			& > div {
 				& > h3 {
+                    font-size: 25px;
+					font-weight: 600;
 					color: $dark-green-title;
-					margin-bottom: 0;
-					font-size: 30px;
-					font-weight: 500;
+                    margin-bottom: 0;
 				}
 				& > p {
 					color: $dark-green-text;
@@ -98,12 +48,56 @@
 	}
 
 	button {
-		height: auto;
-		border-radius: 8px;
-		padding: 12px;
-		width: 180px;
+        font-size: 14px;
+        color: $white;
+        background-color: $dark-green-title;
+        padding: 14px 18px;
+        border-radius: 8px;
+        border: 0;
 		margin-bottom: 15px;
 	}
+
+
+    .card {
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 25px;
+        }
+        .card-title {
+            font-size: 25px;
+            color: $gray;
+        }
+        .metadata {
+            font-size: 14px;
+            .category {
+                color: $light-green;
+            }
+            .read-time {
+                color: $light-gray;
+            }
+        }
+        .entry-content {
+            color: $gray;
+        }
+        .author {
+            display: flex;
+            gap: 0 20px;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+            p {
+                font-size: 14px;
+                font-weight: bold;
+                color: $gray;
+            }
+        }
+    }
 }
 
 
@@ -111,21 +105,6 @@
 
 
 @media (max-width: 991px) {
-    .navbar {
-        text-align: center;
-
-        ul.buttons {
-            flex-direction: row;
-            justify-content: center;
-        }
-    }
-    .header {
-        h1 {
-            font-size: 30px;
-        }
-        p {
-            padding: 0 10px;
-        }
-    }
+    
     
 }
